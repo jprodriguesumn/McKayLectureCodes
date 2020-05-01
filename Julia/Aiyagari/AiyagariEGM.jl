@@ -45,7 +45,7 @@ end
 function PricesEGM(K,Z,params::AiyagariParametersEGM)
     @unpack β,α,δ,γ,ρ,σ,lamw,Lbar = params
     R = Z*α*(K/Lbar)^(α-1.0) + 1.0 - δ
-    w = Z*(1.0-α)*(K/Lbar)^(1.0-α) 
+    w = Z*(1.0-α)*(K/Lbar)^α 
     
     return AggVarsEGM(R,w)
 end
